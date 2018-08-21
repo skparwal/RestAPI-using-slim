@@ -1,9 +1,5 @@
 <?php
 // DIC configuration
-use App\Controllers\VoucherController;
-use App\Controllers\RecipientController;
-use App\Controllers\SpecialofferController;
-
 $container = $app->getContainer();
 
 // Register component on container
@@ -18,13 +14,13 @@ $container['view'] = function ($container) {
 };
 
 $container['VoucherController'] = function($c) {
-    return new VoucherController($c);
+    return new App\Controllers\VoucherController($c);
 };
 
 $container['RecipientController'] = function($c) {
-    return new RecipientController($c);
+    return new App\Controllers\RecipientController($c);
 };
 
 $container['SpecialofferController'] = function($c) {
-    return new SpecialofferController($c);
+    return new App\Controllers\SpecialofferController($c);
 };
