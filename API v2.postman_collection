@@ -1,0 +1,186 @@
+{
+	"variables": [],
+	"info": {
+		"name": "API",
+		"_postman_id": "f5ebff18-4307-95a7-15fe-13751f43f54f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Recipients",
+			"description": "",
+			"item": [
+				{
+					"name": "List Recipients",
+					"request": {
+						"url": "localhost:8080/recipients",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Recipient",
+					"request": {
+						"url": "localhost:8080/recipients",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"Sandy Parwal\",\n\t\"email\": \"sandyparwal@gmail.com\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Recipient",
+					"request": {
+						"url": "localhost:8080/recipients/1",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Special Offers",
+			"description": "",
+			"item": [
+				{
+					"name": "List Offers",
+					"request": {
+						"url": "localhost:8080/specialoffers",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Offer",
+					"request": {
+						"url": "localhost:8080/specialoffers",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"25% Discount on all items\",\n\t\"discount\": \"25%\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Offer",
+					"request": {
+						"url": "localhost:8080/specialoffers/1",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vouchers",
+			"description": "",
+			"item": [
+				{
+					"name": "List Vouchers",
+					"request": {
+						"url": "localhost:8080/vouchers",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Listing",
+					"request": {
+						"url": "localhost:8080/vouchers/listing",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Voucher",
+					"request": {
+						"url": "localhost:8080/vouchers",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"offer_id\" : 4,\n\t\"expiry_date\": \"2018-08-25\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Reedim Voucher",
+					"request": {
+						"url": "localhost:8080/vouchers/reedim",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"parwal@gmail.com\",\n\t\"voucher\": \"2GP4JSV3AD\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Voucher",
+					"request": {
+						"url": "localhost:8080/vouchers/1",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
